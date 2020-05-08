@@ -1,0 +1,118 @@
+python-txaio (20.4.1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Removed excess override.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 08 May 2020 12:03:13 +0200
+
+python-txaio (20.4.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Rebased remove-privacy-breach-in-docs.patch.
+  * Removed fix-await-is-a-keyword.patch (applied upstream).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 07 Apr 2020 13:45:00 +0200
+
+python-txaio (2.10.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938232
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 04 Jan 2020 22:06:13 -0500
+
+python-txaio (2.10.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/control: Add trailing tilde to min version depend to allow
+    backports
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * Add fix-await-is-a-keyword.patch. (Closes: #912182).
+  * Only test with python 2, as the test code may be problematic in Py3.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 29 Oct 2018 14:31:06 +0100
+
+python-txaio (2.8.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Ran wrap-and-sort -bast.
+  * Fixed (build-)depends versions after stretch release.
+  * Updating maintainer.
+  * Standards-Version is now 4.1.1.
+  * Updated VCS fields.
+  * Updated d/copyright format url (https).
+  * Remove gbp.conf.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 09 Nov 2017 19:44:35 +0100
+
+python-txaio (2.8.0-0.1) unstable; urgency=medium
+
+  [ Gianfranco Costamagna ]
+  * Non-maintainer upload.
+  * Drop useless, conflicting usr/LICENSE file in both binary packages.
+  * Update copyright year and author
+  * Update watch file.
+
+  [ Michael Hudson-Doyle ]
+  * New upstream release (Closes: #867037).
+  * d/control: drop build-dependency/dependency on python3-trollius.
+  * d/patches/remove-privacy-breach-in-docs.patch: regenerate.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 19 Jul 2017 08:32:33 +0200
+
+python-txaio (2.5.1+2016.10.03.git.623ef68776-1) unstable; urgency=medium
+
+  * New upstream release based on commit 623ef68776:
+    - Includes upstream fix for pytest (Closes: #840571).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 13 Oct 2016 19:51:07 +0200
+
+python-txaio (2.5.1-2) unstable; urgency=medium
+
+  * d/s/options: extend-diff-ignore of .gitreview
+  * d/control: Using OpenStack's Gerrit as VCS URLs.
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 26 Sep 2016 19:15:57 +0200
+
+python-txaio (2.5.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * d/rules: Fixed UPSTREAM_GIT.
+  * Removed silly patch: do-not-use-alabaster-theme.patch.
+  * Add --ignore=test/test_packaging.py when running tests as it fails (we
+    don't care testing the build of sdists in the Debian context anyway).
+  * Fix path when building sphinx doc (upstream changed it).
+  * Add no-intersphinx.patch.
+  * Add remove-privacy-breach-in-docs.patch.
+  * Standards-Version is now 3.9.8 (no change).
+  * Using pkgos-dh_auto_install from openstack-pkg-tools >= 52~.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 13 Jul 2016 13:55:00 +0200
+
+python-txaio (1.0.0-3) unstable; urgency=medium
+
+  * Using python$$pyvers -m pytest instead of py.test-X.Y (Closes: #814847).
+  * Do not pre-depends on dpkg with xz support anymore.
+  * VCS using HTTPS.
+  * Fixed debian/copyright ordering.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 17 Feb 2016 06:00:47 +0000
+
+python-txaio (1.0.0-2) unstable; urgency=medium
+
+  * Fixed wrong format for Uploaders: field due to wrap-and-sort bug.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 03 May 2015 00:47:57 +0200
+
+python-txaio (1.0.0-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #783055)
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 21 Apr 2015 11:02:23 +0200

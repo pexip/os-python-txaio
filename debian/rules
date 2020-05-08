@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+UPSTREAM_GIT := https://github.com/crossbario/txaio.git
+include /usr/share/openstack-pkg-tools/pkgos.make
+
+%:
+	dh $@ --buildsystem=pybuild --with python3,sphinxdoc
+
+override_dh_auto_install:
+	pkgos-dh_auto_install --no-py2
+	# they are useless and conflicting files
+	find debian -name LICENSE -delete
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	set -e ; set -x ; for pyvers in $(PYTHONS); do \
+		PYTHONPATH=. python$$pyvers -m pytest --ignore=test/test_packaging.py ; \
+	done
+endif
+
+override_dh_sphinxdoc:
+	PYTHONPATH=. python3 -m sphinx -b html docs debian/python-txaio-doc/usr/share/doc/python-txaio-doc/html
+	dh_sphinxdoc
+
+
+override_dh_clean:
+	dh_clean
+	rm -rf build
