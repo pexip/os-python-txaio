@@ -1,3 +1,9 @@
+python-txaio (20.4.1-2pexip2) pexip; urgency=medium
+
+  * Rebuild to move package to main.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 07 Apr 2022 08:06:53 +0000
+
 python-txaio (20.4.1-2pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
