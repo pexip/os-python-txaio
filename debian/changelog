@@ -1,3 +1,9 @@
+python-txaio (20.4.1-2pexip3) pexip; urgency=medium
+
+  * Initial bullseye build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 02 Jun 2022 14:42:51 +0100
+
 python-txaio (20.4.1-2pexip2) pexip; urgency=medium
 
   * Rebuild to move package to main.
