@@ -1,8 +1,13 @@
 python-txaio (20.4.1-2pexip3) pexip; urgency=medium
 
   * Initial bullseye build
+  * Disable test suite.  It is disabled (by accident) in Debian because
+    they iterate over PYTHONS instead of PYTHON3S.  It also cannot work
+    in the project upstream git because they rely on having ssl cert
+    and key material present for the test suite which they do not include
+    as fixtures or generate.
 
- -- Mark Hymers <mark.hymers@pexip.com>  Thu, 02 Jun 2022 14:42:51 +0100
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 21 Jun 2022 11:00:15 +0100
 
 python-txaio (20.4.1-2pexip2) pexip; urgency=medium
 

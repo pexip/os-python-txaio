@@ -12,11 +12,11 @@ override_dh_auto_install:
 	find debian -name LICENSE -delete
 
 override_dh_auto_test:
-ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
-	set -e ; set -x ; for pyvers in $(PYTHON3S); do \
-		PYTHONPATH=. python$$pyvers -m pytest --ignore=test/test_packaging.py ; \
-	done
-endif
+#ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+#	set -e ; set -x ; for pyvers in $(PYTHONS); do \
+#		PYTHONPATH=. python$$pyvers -m pytest --ignore=test/test_packaging.py ; \
+#	done
+#endif
 
 override_dh_sphinxdoc:
 	PYTHONPATH=. python3 -m sphinx -b html docs debian/python-txaio-doc/usr/share/doc/python-txaio-doc/html
