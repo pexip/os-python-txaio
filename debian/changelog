@@ -1,3 +1,17 @@
+python-txaio (21.2.1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 30 Sep 2021 15:36:09 +0200
+
+python-txaio (21.2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Fixed (build-)depends for this release.
+  * Rebased remove-privacy-breach-in-docs.patch.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 25 Aug 2021 10:57:04 +0200
+
 python-txaio (20.4.1-2pexip6) pexip; urgency=medium
 
   * No-change rebuild to move source package to main

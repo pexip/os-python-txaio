@@ -14,11 +14,20 @@ Build-Depends:
  python3-sphinx,
 Build-Depends-Indep:
  python3-alabaster,
- python3-sphinx-rtd-theme,
+ python3-attr,
+ python3-automat,
+ python3-constantly,
  python3-enchant,
+ python3-hamcrest (>= 2.0.2),
+ python3-hyperlink (>= 21.0.0),
+ python3-idna (>= 3.1),
+ python3-incremental,
  python3-mock,
+ python3-packaging,
  python3-pytest,
+ python3-setuptools,
  python3-six,
+ python3-sphinx-rtd-theme,
  python3-twisted,
  python3-zope.interface,
 Standards-Version: 4.1.1
@@ -47,6 +56,15 @@ Description: compatibility API between asyncio/Twisted/Trollius - doc
 Package: python3-txaio
 Architecture: all
 Depends:
+ python3-attr,
+ python3-automat,
+ python3-constantly,
+ python3-hamcrest (>= 2.0.2),
+ python3-hyperlink (>= 21.0.0),
+ python3-idna (>= 3.1),
+ python3-incremental,
+ python3-packaging,
+ python3-setuptools,
  python3-six,
  python3-twisted,
  python3-zope.interface,
