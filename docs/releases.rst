@@ -1,11 +1,25 @@
 txio releases
 =============
 
-master
+21.2.1
+------
+
+- fix: update minimum dependencies (here, and in other crossbar packages) in an attempt to tame the new pip dep resolver madness.
+
+20.12.1
+-------
+
+- new: CI/CD migrated to GitHub Actions
+- new: support Python 3.9 (CI / testing added)
+- new: minimum Python version is now 3.6
+
+
+20.4.1
 ------
 
 - new: upload wheel to S3 (bucket "crossbarbuilder") in CI deploy stage
 - fix: fix event loop threading issue (PR #163)
+
 
 20.3.1
 ------
@@ -13,19 +27,19 @@ master
 - new: support import-time framework selection
 - fix: remove python2 support (finally)
 
+
 20.1.1
 ------
 
 - IMPORTANT: beginning release v20.1.1, we only support Python 3.5 or later
 - new: moved ``time_ns`` and ``perf_counter_ns`` helper functions here
 
+
 18.8.1
 ------
 
-* IMPORTANT: release v18.8.1 is the last release supporting Python 2. We will support Python 3.5 and later beginning with release v20.1.1.
-- add API to support cancellation; this means passing a 1-argument
-  callable to ``create_future`` and ``txaio.cancel`` to actually
-  cancel a future
+- IMPORTANT: release v18.8.1 is the last release supporting Python 2. We will support Python 3.5 and later beginning with release v20.1.1.
+- add API to support cancellation; this means passing a 1-argument callable to ``create_future`` and ``txaio.cancel`` to actually cancel a future
 - support Python 3.7 (CI / testing added)
 
 
@@ -39,9 +53,7 @@ master
 2.10.0
 ------
 
-- the asyncio version of ``make_logger`` now deduces a proper
-  namespace instead of using the root (thanks `spr0cketeer
-  <https://github.com/spr0cketeer>`_)
+- the asyncio version of ``make_logger`` now deduces a proper namespace instead of using the root (thanks `spr0cketeer <https://github.com/spr0cketeer>`_)
 
 
 2.9.0
@@ -55,6 +67,7 @@ master
 
 - September 4, 2017
 - fix: no longer install LICENSE file into installation directory (conflicts!)
+
 
 2.8.1
 -----

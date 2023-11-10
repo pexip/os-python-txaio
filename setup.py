@@ -41,7 +41,7 @@ with open('README.rst') as f:
 # Twisted dependencies
 #
 extras_require_twisted = [
-    'zope.interface>=3.6',              # Zope Public License
+    'zope.interface>=5.2.0',            # Zope Public License
     'twisted>=20.3.0',                  # MIT
 ]
 
@@ -63,6 +63,7 @@ extras_require_dev = [
     'tox>=2.1.1',                       # MIT
     'mock==1.3.0',                      # BSD
     'twine>=1.6.5',                     # Apache 2.0
+    'tox-gh-actions>=2.2.0 ',           # MIT
 ]
 
 # everything
@@ -80,7 +81,7 @@ setup(
     author_email='autobahnws@googlegroups.com',
     url='https://github.com/crossbario/txaio',
     platforms=('Any'),
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     extras_require={
         'twisted': extras_require_twisted,
         'asyncio': extras_require_asyncio,
@@ -111,10 +112,10 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Libraries",
