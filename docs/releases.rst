@@ -1,6 +1,21 @@
 txio releases
 =============
 
+23.1.1
+------
+
+- fix: support for Python up to v3.11
+- fix: update GitHub CI
+- fix: copyright transferred to typedef int GmbH - no license change!
+
+22.2.1
+------
+
+- fix: cancel handling in python 3.8/3.9. (#175)
+- fix: gracefully fail if coroutine called with wrong args (#176)
+- fix: eliminate redundant dep. on mock (#170)
+- fix: doc note that twisted supports native coroutines (#172)
+
 21.2.1
 ------
 

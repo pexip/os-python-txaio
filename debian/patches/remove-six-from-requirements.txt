@@ -1,0 +1,17 @@
+Description: remove obsolete dependency on six
+Author: Alexandre Detiste <alexandre.detiste@gmail.com>
+Date: Sat, 6 Jan 2024 02:07:45 +0100
+Forwarded: https://github.com/crossbario/txaio/pull/186/commits/3af5ff2db8194486f57e1ead91d03efe2638cd0b
+Last-Update: 2024-01-11
+
+Index: python-txaio/requirements.txt
+===================================================================
+--- python-txaio.orig/requirements.txt
++++ python-txaio/requirements.txt
+@@ -7,6 +7,5 @@ incremental>=17.5.0
+ packaging>=20.9
+ PyHamcrest>=2.0.2
+ setuptools>=49.2.1
+-six>=1.15.0
+ Twisted>=20.3.0
+ zope.interface>=5.2.0
