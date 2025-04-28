@@ -1,2 +1,3 @@
 no-intersphinx.patch
 remove-privacy-breach-in-docs.patch
+remove-six-from-requirements.txt

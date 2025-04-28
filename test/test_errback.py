@@ -2,7 +2,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) Crossbar.io Technologies GmbH
+# Copyright (c) typedef int GmbH
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +23,7 @@
 # THE SOFTWARE.
 #
 ###############################################################################
+import sys
 
 import txaio
 
@@ -107,6 +108,32 @@ def test_errback_plain_exception(framework):
     assert 'it failed' in tb
     assert txaio.failure_message(errors[0]) == 'RuntimeError: it failed'
     assert 'it failed' in str(errors[0])
+
+
+def test_errback_cancel_exception(framework):
+    '''
+    reject a future with a CancelledError
+    '''
+    f = txaio.create_future()
+    errors = []
+
+    def err(f):
+        errors.append(f)
+    txaio.add_callbacks(f, None, err)
+    txaio.cancel(f, msg="future cancelled")
+
+    run_once()
+
+    assert len(errors) == 1
+    assert isinstance(errors[0], txaio.IFailedFuture)
+    tb = txaio.failure_format_traceback(errors[0])
+
+    assert 'CancelledError' in tb
+    if txaio.using_asyncio and sys.version_info >= (3, 9):
+        assert txaio.failure_message(errors[0]) == 'CancelledError: future cancelled'
+        assert 'future cancelled' in str(errors[0])
+    else:
+        assert txaio.failure_message(errors[0]) == 'CancelledError: '
 
 
 def test_errback_illegal_args(framework):
