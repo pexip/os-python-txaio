@@ -1,3 +1,9 @@
+python-txaio (23.1.1-4+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:56:30 +0100
+
 python-txaio (23.1.1-4) unstable; urgency=medium
 
   * Remove python3-mock from build-dependencies (Closes: #1066141).
